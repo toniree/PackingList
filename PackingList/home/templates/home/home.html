@@ -23,9 +23,55 @@
                     <li>
                         <a class="page-scroll" href="#contact">Add a New Packing List</a>
                     </li>
-                    <li>
-                        <a class="page-scroll">Settings</a>
-                    </li>
+                    <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span id="user-name2" class="hidden-xs">Account</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <p>
+                  <div id="user-name">Username</div>
+                  <div id="user-coupons"><small>Please log in with your email</small></div>
+
+                </p>
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                
+                    <p>
+                    <form>
+                        
+                        <input type="text" name="email" placeholder="e-mail"><br>
+                        
+                    </form>
+                    </p>
+                  
+                  <div id="checkdata"></div>
+                
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <button type="button" class="btn btn-default btn-flat" onclick="unc()">Sign In</button>
+                </div>
+                <div class="pull-right">
+                  <button type="button" class="btn btn-default btn-flat" id="signupbutton" onclick="checkLoginState();">Sign Up</button>
+                  <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                  </fb:login-button> -->
+                </div>
+
+                <div class="pull-right">
+                  <button type="button" class="btn btn-default btn-flat" onclick="fbLogout()">Log Out</button>
+                </div>
+              </li>
+            </ul>
+          </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -42,20 +88,34 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
+                        <section id="portfolio">
                         <h1>Packing Lists</h1>
                         <h3>Select a Packing List Below</h3>
                         <hr class="intro-divider">
                         <ul id = "lists" class="list-inline intro-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="#portfolioModal" data-toggle="modal" class="btn btn-default btn-lg"><i class="fa fa-vimeo fa-fw"></i> <span>Work
+                                </span>
+                                    <div class="portfolio-hover-content">
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                <a href="#portfolioModal" data-toggle="modal" class="btn btn-default btn-lg"><i class="fa fa-vimeo fa-fw"></i> <span>School</span>
+                                <div class="portfolio-hover-content">
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href="#portfolioModal" data-toggle="modal" class="btn btn-default btn-lg"><i class="fa fa-vimeo fa-fw"></i> <span>Vacation</span>
+                                <div class="portfolio-hover-content">
+                                    </div>
+                                </a>
                             </li>
                         </ul>
+                        <a href="#services" class="page-scroll btn btn-xl">Add a New Packing List</a>
+                    </section>
+                        
                     </div>
                 </div>
             </div>
@@ -77,13 +137,12 @@
                 <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
-                                    <textarea type="text" class="form-control" placeholder="Packing List Name *" id="recipeTitle" required data-validation-required-message="Please enter a name for your packing list."></textarea>
+                                    <input type="text" class="form-control" placeholder="Packing List Name *" id="recipeTitle" required="" data-validation-required-message="Please enter a name for your packing list." aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
-                            <div class = "col-md-6">
+                            
                                 <div class="form-group">
                                 	<textarea class="form-control" placeholder="Items **ENTER ONE ITEM PER LINE**" id="ingredients" required data-validation-required-message="List the Items line by line."></textarea>
                                     <p class="help-block text-danger"></p>
@@ -101,6 +160,23 @@
         </div>
     </section>
 
+    <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2>List Name</h2>
+                <p>
+                    food </br>
+                    bike </br>
+                    cat </br>
+                </p>
+                <div class="lr"> 
+                    <div class="rl"> 
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -135,6 +211,7 @@
 
     <!-- Theme JavaScript -->
     <script src="{% static 'js/agency.min.js' %}"></script>
+    <script type="{% static 'js/facebook.js' %}" charset="utf-8"></script>
 
     <!-- DynamoDB JavaScript -->
     <script src="{% static 'js/recipe_list.js' %}"></script>
