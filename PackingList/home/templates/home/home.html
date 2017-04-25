@@ -24,43 +24,36 @@
                     <li>
                         <a class="page-scroll" href="#rec">Reccomendations</a>
                     </li>
-                    <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span id="user-name2" class="hidden-xs">Account</span>
-            </a>
-            <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"> Account</a>
+                            <ul class="dropdown-menu">
               <!-- The user image in the menu -->
-              <li class="user-header">
-                  <div id="user-name">Username</div>
-                  <div id="user-coupons"><small>Please log in with your email</small></div>
-              </li>
+                            <li class="user-header">
+                                <div id="user-name">Username</div>
+                                <div id="user-coupons"><small>Please log in with your email</small></div>
+                            </li>
               <!-- Menu Body -->
-              <li class="user-body">
-                    <form>
-                        <input type="text" name="email" placeholder="e-mail"><br>
-                    </form>
-                  <div id="checkdata"></div>
+                            <li class="user-body">
+                                <form>
+                                    <input type="text" name="email" placeholder="e-mail"><br>
+                                </form>
+                                <div id="checkdata"></div>
                 <!-- /.row -->
-              </li>
+                            </li>
               <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <button type="button" class="btn btn-default btn-flat" onclick="unc()">Sign In</button>
-                </div>
-                <div class="pull-right">
-                  <button type="button" class="btn btn-default btn-flat" id="signupbutton" onclick="checkLoginState();">Sign Up</button>
-                  <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                  </fb:login-button> -->
-                </div>
-                <div class="pull-right">
-                  <button type="button" class="btn btn-default btn-flat" onclick="fbLogout()">Log Out</button>
-                </div>
-              </li>
-            </ul>
-          </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <button type="button" class="btn btn-default btn-flat" onclick="unc()">Sign In</button>
+                                </div>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-default btn-flat" id="signupbutton" onclick="checkLoginState();">Sign Up</button>
+                                </div>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-default btn-flat" onclick="fbLogout()">Log Out</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
