@@ -10,7 +10,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Packing List Helper</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Packing List Assistant</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -266,8 +266,9 @@
                         <form action="#" method="post">
                             <div class="input-group">
                                 <input type="text" name="message" placeholder="Type an existing item name to remove, or new item to add" class="form-control">
+                                {% csrf_token %}
                                     <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-primary btn-flat">Submit Edit</button>
+                                        <button type="submit" class="btn btn-primary btn-flat" onclick="#">Submit Edit</button>
                                     </span>
                             </div>
                         </div>
