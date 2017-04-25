@@ -2,7 +2,6 @@
 
 {% block content %}
 <body>
-
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -13,7 +12,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Packing List Helper</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -22,6 +20,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Add a New Packing List</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#rec">Reccomendations</a>
                     </li>
                     <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -33,26 +34,15 @@
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <p>
                   <div id="user-name">Username</div>
                   <div id="user-coupons"><small>Please log in with your email</small></div>
-
-                </p>
-
               </li>
               <!-- Menu Body -->
               <li class="user-body">
-                
-                    <p>
                     <form>
-                        
                         <input type="text" name="email" placeholder="e-mail"><br>
-                        
                     </form>
-                    </p>
-                  
                   <div id="checkdata"></div>
-                
                 <!-- /.row -->
               </li>
               <!-- Menu Footer-->
@@ -65,7 +55,6 @@
                   <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                   </fb:login-button> -->
                 </div>
-
                 <div class="pull-right">
                   <button type="button" class="btn btn-default btn-flat" onclick="fbLogout()">Log Out</button>
                 </div>
@@ -84,7 +73,6 @@
    
     <div class="intro-header">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
@@ -122,9 +110,51 @@
 
         </div>
         <!-- /.container -->
-
     </div>
 </body>
+
+
+    <section id="rec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Recommended Lists</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <a href ="#portfolioModal1" data-toggle="modal">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>  
+                    <h4 class="service-heading">Work</h4>
+                </div>
+                </a>
+                <a href ="#portfolioModal2" data-toggle="modal">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">School</h4>
+                    
+                </div>
+                </a>
+                <a href ="#portfolioModal3" data-toggle="modal">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Beach</h4>
+                    
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
 
     <section id="contact">
         <div class="container">
@@ -159,6 +189,69 @@
             </div>
         </div>
     </section>
+
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2>Recommended Items For Work</h2>
+                <br>
+                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
+                <ul>
+                    <li><input type="checkbox"><label>Backpack</label></li>
+                    <li><input type="checkbox"/><label>Laptop, wallet and keys</label></li>
+                    <li><input type="checkbox"/><label>Shoes & Coat</label></li>
+                    <li><input type="checkbox"/><label>Cigarettes</label></li>
+                </ul>
+                <div class="lr"> 
+                    <div class="rl">    
+                    </div> 
+                    <br>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2>Recommended Items For School</h2>
+                <br>
+                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
+                <ul>
+                    <li><input type="checkbox"><label>Backpack</label></li>
+                    <li><input type="checkbox"/><label>Laptop</label></li>
+                    <li><input type="checkbox"/><label>Cigarettes</label></li>
+                </ul>
+                <div class="lr"> 
+                    <div class="rl">    
+                    </div> 
+                    <br>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2>Recommended Items For the Beach</h2>
+                <br>
+                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
+                <ul>
+                    <li><input type="checkbox"><label>Swimsuit</label></li>
+                    <li><input type="checkbox"/><label>Beer</label></li>
+                    <li><input type="checkbox"/><label>Cigarettes</label></li>
+                </ul>
+                <div class="lr"> 
+                    <div class="rl">    
+                    </div> 
+                    <br>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                </div> 
+            </div>
+        </div>
+    </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -197,6 +290,8 @@
             </div>
         </div>
     </div>
+
+
     <footer>
         <div class="container">
             <div class="row">
