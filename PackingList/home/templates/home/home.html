@@ -1,6 +1,104 @@
 {% extends "home/header.html" %}
 
 {% block content %}
+<head>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+<script>
+AWS.config.update({
+  region: "us-east-1",
+  endpoint: 'https://dynamodb.us-east-1.amazonaws.com',
+  // accessKeyId default can be used while using the downloadable version of DynamoDB. 
+  // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
+  accessKeyId: "AKIAJTTAKGGKCNLEPNLQ",
+  // secretAccessKey default can be used while using the downloadable version of DynamoDB. 
+  // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
+  secretAccessKey: "G+EnVR76QZa6+ypbxXv0YDFo2nASNCFzuMx6rEIA"
+});
+
+var dynamodb = new AWS.DynamoDB();
+var username = "-1";
+var myLists = "-1";
+var tableNames = new AWS.DynamoDB();
+   db.listTables(function(err, data) {
+   console.log(data.TableNames);
+});
+
+function validateUsername(uname) {
+    let temp = "" + uname + "_MYLISTS";
+    if (temp in tableNames) {
+        username = uname;
+        myLists = temp;
+        alert("login success");
+    } else {
+        alert("this username does not exist");
+    }
+}
+
+function getList(listName) {
+    var table = myLists;
+
+    var params = {
+        TableName: table,
+        Key:{
+            "ListName": listName;
+        }
+    };
+    docClient.get(params, function(err, data) {
+        if (err) {
+            document.getElementById('textarea').innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+            return JSON.stringify(data, undefined, 2);
+        }
+    });
+}
+
+function updateList(listName, checkedList, uncheckedList) {
+    var table = myLists;
+
+    var params = {
+        TableName:table,
+        Key:{
+            "ListName": listName
+        },
+        UpdateExpression: "set checked = :c",
+        ExpressionAttributeValues:{
+            ":c":checkedList;
+            ":u":uncheckedList;
+        },
+        ReturnValues:"UPDATED_NEW"
+    };
+
+    docClient.update(params, function(err, data) {
+        if (err) {
+            alert("Update failed");
+        } else {
+            alert("Update success");
+        }
+    });
+}
+
+function deleteList(listName) {
+    var table = "Movies";
+
+    var params = {
+        TableName:table,
+        Key:{
+            "ListName": listName
+        },
+    };
+
+    docClient.delete(params, function(err, data) {
+        if (err) {
+            alert("Delete failed");
+        } else {
+            alert("Delete success");
+        }
+    });
+}
+
+</script>
+</head>
 <body>
 
     <!-- Navigation -->
