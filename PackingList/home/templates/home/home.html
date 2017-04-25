@@ -113,7 +113,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="#services" class="page-scroll btn btn-xl">Add a New Packing List</a>
+                        <a href="#contact" class="page-scroll btn btn-xl" class="page-scroll">Add a New Packing List</a>
                     </section>
                         
                     </div>
@@ -165,6 +165,8 @@
             <div class="modal-content">
                 
                 <h2>List Name</h2>
+                <br>
+                <button id="refreshButton" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-refresh"></i> Refresh </button>
                 <ul>
                     <li><input type="checkbox"><label>Backpack</label></li>
                     <li><input type="checkbox"/><label>Laptop, wallet and keys</label></li>
@@ -174,10 +176,22 @@
                 
                 <div class="lr"> 
                     <div class="rl"> 
-                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                        <button id="deleteButton" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-minus"></i> Delete </button>
-                        <button id="refreshButton" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-refresh"></i> Refresh </button>
+                        <div class = "container">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <input type="text" name="message" placeholder="Type an existing item name to remove, or new item to add" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary btn-flat">Submit Edit</button>
+                                    </span>
+                            </div>
+                        </div>
+                        
+                        </form>
                     </div> 
+                    <br>
+                    <button id="deleteButton" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-minus"></i> Delete this List</button>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
 
                 </div> 
             </div>
