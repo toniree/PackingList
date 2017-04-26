@@ -399,68 +399,6 @@ function deleteList(listName) {
         </div>
     </section>
 
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <h2>Recommended Items For Work</h2>
-                <br>
-                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
-                <ul>
-                    <li><input type="checkbox"><label>Backpack</label></li>
-                    <li><input type="checkbox"/><label>Laptop, wallet and keys</label></li>
-                    <li><input type="checkbox"/><label>Shoes & Coat</label></li>
-                    <li><input type="checkbox"/><label>Cigarettes</label></li>
-                </ul>
-                <div class="lr"> 
-                    <div class="rl">    
-                    </div> 
-                    <br>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                </div> 
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <h2>Recommended Items For School</h2>
-                <br>
-                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
-                <ul>
-                    <li><input type="checkbox"><label>Backpack</label></li>
-                    <li><input type="checkbox"/><label>Laptop</label></li>
-                    <li><input type="checkbox"/><label>Cigarettes</label></li>
-                </ul>
-                <div class="lr"> 
-                    <div class="rl">    
-                    </div> 
-                    <br>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                </div> 
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <h2>Recommended Items For the Beach</h2>
-                <br>
-                <button id="saveList" type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-save"></i> Save this List </button>
-                <ul>
-                    <li><input type="checkbox"><label>Swimsuit</label></li>
-                    <li><input type="checkbox"/><label>Beer</label></li>
-                    <li><input type="checkbox"/><label>Cigarettes</label></li>
-                </ul>
-                <div class="lr"> 
-                    <div class="rl">    
-                    </div> 
-                    <br>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                </div> 
-            </div>
-        </div>
-    </div>
-
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -496,7 +434,7 @@ function deleteList(listName) {
     </section>
 
     <section id="listModals">
-        THIS IS WHERE WE APPEND THE MODALS
+        <!-- THIS IS WHERE WE APPEND THE MODALS -->
     </section>
     <footer>
         <div class="container">
